@@ -1,0 +1,50 @@
+@localhost = http://127.0.0.1:8000
+@json = application/json
+@token = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NzkyMzMyMDcsImV4cCI6MTY3OTIzNjgwNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiaGFkaSJ9.lTbPbT_29KL1e6839XSleSgjycj0eXSwEoNi_eJm57ngbKbDPMekdQd5aXS7Z5mftM8MMyodiVnNE_wwnasXCBybK5jEmnp9d6HFkARwLuGsTcVtb1nMqAU0X-Y80igKjuDFVeqenYipEIcbipDP4_uvly3R7ZkEdgV4f6fX3919hpPc50uYRpCQfX-o-fA81DKsggpwl18e43Cs9LzYgUu_F206yvonnhcWhNBWdTYBHKmDaMugfmLE7W_seNAAIi3a_5y_O14oshdMLOj9bDcsgwhfz-SwI6qdciVXd-zEo8rc6ndK0OUKagi611AJ8F3cNLujkUk4JuwIgWeDpA
+
+###
+post {{localhost}}/api/login_check
+Content-Type: {{json}}
+Accept: {{json}}
+
+{
+    "username" : "hadi",
+    "password" : "12345678"
+}
+
+
+###
+get {{localhost}}/api/review/8
+Content-Type: {{json}}
+Accept: {{json}}
+Authorization: {{token}}
+
+###
+post {{localhost}}/api/review
+Content-Type: {{json}}
+Accept: {{json}}
+Authorization: {{token}}
+
+{
+    "project" : 2,
+    "overall" : 4,
+    "quality" : 5,
+    "communication" : 2,
+    "price" : 4,
+    "feedback" : "2"
+}
+
+###
+put {{localhost}}/review/7
+Content-Type: {{json}}
+Accept: {{json}}
+Authorization: {{token}}
+
+{
+    "project" : 1,
+    "overall" : 5,
+    "quality" : 5,
+    "communication" : 4,
+    "price" : 4,
+    "feedback" : "dfdfd1231231"
+}
