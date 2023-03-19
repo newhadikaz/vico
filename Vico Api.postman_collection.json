@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "eadf6dde-3085-4e78-a3b6-647d08f8eea9",
+		"name": "Vico Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth (get token)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"hadi\",\r\n    \"password\" : \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login_check",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/review/14",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"review",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"project\" : 2,\r\n    \"overall\" : 4,\r\n    \"quality\" : 5,\r\n    \"communication\" : 2,\r\n    \"price\" : 4,\r\n    \"feedback\" : \"feedback\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/review",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"project\" : 2,\r\n    \"overall\" : 5,\r\n    \"quality\" : 5,\r\n    \"communication\" : 4,\r\n    \"price\" : 4,\r\n    \"feedback\" : \"feedback2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/review/14",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"review",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NzkyMzY0ODMsImV4cCI6MTY3OTI0MDA4Mywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiaGFkaSJ9.aX0A_ct2beTTwShWdhz-k-HTIW6nkHdTPzaf6bzwIaUb1jp_r7AKjoZs2SXT9K7rRS6El8LgssZa0_K6uJ4mPaAcpVTtCoUqSbyqYCFfzgfqMz0kxIv7xr8dUdADyJz-DaE4TXo5nod0YbKjThsF181hIIG8BQQX9B9uIzqbgDNnZ40YRUlQIPgePrGVQRtggnz-600mlEdIl1UoD9zDtL6XpuqgBj1PjGhmdmposBSGGHoOBqod_q31hidPE9DqZmd_3msZLAq76FiwR-BWpkvAwrMVoe-wrs5pNxcul9SOR612SH3xLvs7tt0_7hkLPvK1hyWcRiTcSaYh75rATA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
